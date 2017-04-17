@@ -8,9 +8,9 @@ import base.conn.ServerConnection;
 /** 
 * Responsável pela conexao com o servidor principal 
 */  
-public class MainServerConnection extends ServerConnection {  
+public class Connection extends ServerConnection {  
  
-	public MainServerConnection(String configFileName) throws FileNotFoundException, IOException {  
+	public Connection(String configFileName) throws FileNotFoundException, IOException {  
 		super(configFileName);  
 	}  
  

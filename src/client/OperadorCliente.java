@@ -10,7 +10,7 @@ import org.jdom.JDOMException;
 
 import base.conn.ServerConnection;
 import base.operator.TipoOperador;
-import client.conn.MainServerConnection;
+import client.conn.Connection;
 
 public class OperadorCliente {  
   
@@ -34,7 +34,7 @@ public class OperadorCliente {
          throw new IllegalArgumentException("Parâmetros inválidos!");  
       }  
         
-      serverConnection = new MainServerConnection(".\\client.properties");  
+      serverConnection = new Connection(".\\client.properties");  
       serverConnection.open();  
       Document serverDoc = params2XMLDocument();  
         
