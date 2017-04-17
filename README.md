@@ -1,1 +1,4 @@
-# calculadora-distribuida
+# Calculadora Distribuida
+
+
+Calculadora Distribuída utilizando socket em java
