@@ -3,6 +3,8 @@
 
 Calculadora Distribuída utilizando socket em java
 
+Disciplina Sistemas Distribuídos - FACAPE
+
 O objetivo deste projeto, foi desenvolver um pequeno sistema distribuído de servidores utilizando sockets.
 
 O projeto foi composto de algumas etapas, que foram avaliadas separadamente e também em conjunto.
@@ -17,3 +19,5 @@ O sistema é composto por:
 - clientes (calculadoras) que farão requisições para o servidor principal.
 - As 4 operações básicas devem ser executadas nos servidores zumbis básicos.
 - As operações de Porcentagem, raiz quadrada e potenciação devem ser executadas nos servidores zumbis especiais.
+
+# 
