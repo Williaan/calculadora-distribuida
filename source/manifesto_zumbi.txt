@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: servidorZumbi.app.ServidorZumbiApp
+Class-Path: base.jar org.json.jar org.json.simple.jar
+
