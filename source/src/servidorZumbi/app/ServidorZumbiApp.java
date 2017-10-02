@@ -10,13 +10,13 @@ public class ServidorZumbiApp {
 
 	public static void main(String[] args) throws Exception {
 		
-		if (!isArgsValid(args)) {
-			showUsageMode();
-			System.exit(1);
-		 }
+//		if (!isArgsValid(args)) {
+//			showUsageMode();
+//			System.exit(1);
+//		 }
 
-		TipoServidor tipoServidor = TipoServidor.valueOf(args[0].toUpperCase());
-//		TipoServidor tipoServidor = TipoServidor.valueOf("ESPECIAL");
+//		TipoServidor tipoServidor = TipoServidor.valueOf(args[0].toUpperCase());
+		TipoServidor tipoServidor = TipoServidor.valueOf("basico".toUpperCase());
 
 		try {
 			ZumbiServer operatorServer = new ZumbiServer(tipoServidor);
@@ -47,7 +47,7 @@ public class ServidorZumbiApp {
 
 	private static void showUsageMode() {
 		
-		String msg = " # Use o comando: java -jar ServidorZumbi.jar [tipo] para ativar o serviço\n"
+		String msg = " # Use o comando: java -jar ServidorZumbi.jar [tipo] para ativar o serviï¿½o\n"
 				+ " # [tipo] BASICO | ESPECIAL";
 		
 		System.out.println(msg);

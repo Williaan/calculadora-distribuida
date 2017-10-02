@@ -11,14 +11,14 @@ public class ServidorPrincipalApp {
 
 	public static void main(String[] args) {
 
-//		 String s = "10000";
+		 String s = "10000";
 
-		if (!isArgsValid(args)) {
-			showUsageMode();
-			System.exit(1);
-		}
+//		if (!isArgsValid(args)) {
+//			showUsageMode();
+//			System.exit(1);
+//		}
 
-		int serverPort = Integer.parseInt(args[0]);
+		int serverPort = Integer.parseInt(s);
 
 		try {
 
@@ -52,7 +52,7 @@ public class ServidorPrincipalApp {
 
 	private static void showUsageMode() {
 		String msg = "Use o comando: java -jar ServidorPrincipal.jar [porta]\n";
-		msg += "[porta] \nonde porta é a porta onde o servidor vai esperar por conexoes.\n";
+		msg += "[porta] \nonde porta ï¿½ a porta onde o servidor vai esperar por conexoes.\n";
 		System.out.println(msg);
 	}
 }

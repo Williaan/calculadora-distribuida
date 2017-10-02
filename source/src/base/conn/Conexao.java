@@ -53,7 +53,7 @@ public abstract class Conexao {
 	}
 
 	/**
-	 * Método que configura a conexão
+	 * Mï¿½todo que configura a conexï¿½o
 	 */
 	public abstract void configure();
 
@@ -85,7 +85,7 @@ public abstract class Conexao {
 			this.jsonObjectIO = new JsonObjectIO(socket);
 			rt = true;
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}	
 		
 		System.out.println("serverConneciont -> " + this.serverAddress + " - " + this.serverPort);

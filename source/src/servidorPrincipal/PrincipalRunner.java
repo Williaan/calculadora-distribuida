@@ -75,7 +75,7 @@ public class PrincipalRunner implements Runnable {
 		int serverPort = obj.getInt("port");
 		obj.remove("port");
 		String serverAddress = "";
-		
+		System.out.println("teste!!:: " + obj);
 		try {			
 			serverAddress = (((InetSocketAddress) socket.getRemoteSocketAddress()).getAddress()).toString().replace("/","");
 			obj.put("host", serverAddress + ":" + serverPort);
@@ -83,14 +83,14 @@ public class PrincipalRunner implements Runnable {
 			JSONObject resultJson = new JSONObject();
 			resultJson.put("cadastro", rt);
 			jsonObjectIO.sendJson(resultJson);
-			
+			queue.setServer(obj.getString("server"), obj.getString("host"));
 //			queue.update();
+			System.out.println("MainRunner -> addrss: " + serverAddress + " port: " + serverPort);
 			
 		} catch (JSONException | ParseException e) {
 			e.printStackTrace();
 		}
 
-		System.out.println("MainRunner -> addrss: " + serverAddress + " port: " + serverPort);
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class PrincipalRunner implements Runnable {
 				do {
 					host = queue.getServer(server);
 					System.out.println(host);
-					con = new PrincipalConexaoZumbi(server);
+					con = new PrincipalConexaoZumbi(host);
 					condition = !con.openByJson("");
 				} while (host != null && condition);
 				
